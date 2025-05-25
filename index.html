@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Flame Vision Design - Marketing Digital para Negócios Locais</title>
+    <meta name="description" id="metaDescription" content="Sua agenda cheia começa aqui. Atraia mais clientes e transforme seu negócio local com estratégias de marketing digital simples e eficazes.">
+    <meta name="keywords" id="metaKeywords" content="marketing digital, negócios locais, atrair clientes, agência de marketing, criação de sites, gestão de redes sociais, tráfego pago">
+    <meta name="author" content="Flame Vision Design">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.flamevisiondesign.com.br/"> <meta property="og:title" id="ogTitle" content="Flame Vision Design - Sua agenda cheia começa aqui">
+    <meta property="og:description" id="ogDescription" content="Atraia mais clientes e fortaleça sua presença online com um site moderno e funcional.">
+    <meta property="og:image" content="https://www.flamevisiondesign.com.br/logo.png"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.flamevisiondesign.com.br/"> <meta property="twitter:title" id="twitterTitle" content="Flame Vision Design - Sua agenda cheia começa aqui">
+    <meta property="twitter:description" id="twitterDescription" content="Atraia mais clientes e transforme seu negócio local com estratégias de marketing digital simples e eficazes.">
+    <meta property="twitter:image" content="https://www.flamevisiondesign.com.br/logo.png"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF0000; /* Vermelho puro e vibrante */
+            --secondary-color: #FFD835; /* Amarelo (para contraste) */
+            --text-color: #FFFFFF; /* Branco para o texto em fundo escuro */
+            --background-color: #000000; /* Fundo preto puro */
+            --card-background: #1a1a1a; /* Fundo dos cards/seções internas (cinza escuro) */
+            --accent-green: #25D366; /* Verde do WhatsApp (para os logos nos botões) */
+            --accent-green-darker: #1DA851; /* Verde do WhatsApp mais escuro para hover */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: var(--background-color);
+            color: var(--text-color); /* Texto branco */
+        }
+
+        .navbar {
+            text-align: center;
+            padding: 10px 0;
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra mais visível no fundo escuro */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo-container {
+            flex-shrink: 0;
+        }
+
+        .navbar .logo {
+            height: 60px; /* Tamanho do logo no navbar */
+            width: auto;
+            display: block;
+        }
+
+        .navbar .language-buttons {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .navbar button {
+            background-color: transparent;
+            border: 1px solid var(--secondary-color); /* Borda dos botões de idioma */
+            color: var(--text-color); /* Texto dos botões de idioma (branco) */
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .navbar button.active,
+        .navbar button:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color); /* Texto em cor primária no hover/ativo */
+            border-color: var(--primary-color);
+        }
+
+        .company-name {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--card-background); /* Fundo dos cards (cinza escuro) */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra mais visível no fundo escuro */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: var(--text-color); /* Texto branco */
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cta-section h2 {
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo dos botões de CTA (WhatsApp) */
+        .primary-button {
+            display: inline-flex; /* Use flexbox para alinhar ícone e texto */
+            align-items: center; /* Alinha verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+            background-color: var(--card-background); /* Fundo cinza escuro */
+            color: var(--accent-green); /* Texto verde do WhatsApp */
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra ajustada para fundo escuro */
+            margin-bottom: 15px;
+            border: 2px solid var(--accent-green); /* Borda verde do WhatsApp */
+        }
+
+        .primary-button:hover {
+            background-color: var(--accent-green); /* Fundo verde no hover */
+            color: var(--card-background); /* Texto cinza escuro no hover (ou branco dependendo do contraste) */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra ajustada para fundo escuro */
+        }
+
+        /* Filtro para colorir o ícone do WhatsApp de preto/cinza para verde */
+        .primary-button img, .package-cta img {
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 30px;
+            height: auto;
+            /* Este filtro tenta transformar um ícone preto em verde */
+            filter: invert(47%) sepia(87%) saturate(400%) hue-rotate(80deg) brightness(99%) contrast(97%); /* Verde do WhatsApp */
+            transition: filter 0.3s ease;
+        }
+        
+        .primary-button:hover img, .package-cta:hover img {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ícone branco no hover */
+        }
+
+        /* Nichos / Portfólio */
+        .portfolio-section {
+            margin-bottom: 60px;
+        }
+        .portfolio-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .portfolio-section p {
+            color: var(--text-color); /* Texto branco */
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado para mais itens */
+            gap: 20px;
+        }
+        .portfolio-item {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra ajustada */
+            transition: transform 0.3s ease;
+            text-align: center;
+            border: 1px solid #333; /* Borda mais escura */
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        /* Estilo para links das imagens de portfólio */
+        .portfolio-item a {
+            text-decoration: none; /* Remove sublinhado padrão */
+            color: inherit; /* Herda a cor do texto do pai */
+            display: block; /* Faz o link ocupar todo o espaço do item */
+        }
+        .portfolio-item h3 {
+            color: var(--primary-color);
+            padding: 15px;
+            margin: 0;
+            font-size: 1.3em;
+        }
+        .portfolio-item p {
+            color: var(--text-color); /* Texto branco */
+            padding: 0 15px 15px;
+            font-size: 0.95em;
+        }
+
+
+        /* Seção de Pacotes */
+        .packages-section {
+            margin-bottom: 60px;
+        }
+        .packages-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .packages-section p {
+            color: var(--text-color); /* Texto branco */
+        }
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .package-card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra ajustada */
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            border: 1px solid #333; /* Borda mais escura */
+        }
+        .package-card.popular {
+            border: 3px solid var(--primary-color); /* Borda da cor principal */
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7); /* Sombra mais intensa da cor principal (vermelho puro) */
+            transform: translateY(-10px);
+        }
+        .package-card.popular::before {
+            content: attr(data-label);
+            background-color: var(--primary-color); /* Cor principal para o selo "Mais Popular" */
+            color: white;
+            padding: 5px 15px;
+            border-radius: 0 0 8px 8px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9em;
+            font-weight: bold;
+            z-index: 10;
+        }
+        .package-card h3 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .package-card .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--accent-green); /* Preço em verde do WhatsApp */
+            margin-bottom: 20px;
+        }
+        .package-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .package-card ul li {
+            margin-bottom: 10px;
+            color: var(--text-color); /* Texto branco */
+            font-size: 1.1em;
+            position: relative;
+            padding-left: 25px;
+        }
+        .package-card ul li::before {
+            content: '✓';
+            color: var(--primary-color); /* Ícone de check com a cor principal */
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .package-card .package-cta {
+            display: inline-flex; /* Use flexbox para alinhar ícone e texto */
+            align-items: center; /* Alinha verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+            background-color: var(--accent-green); /* Botão de CTA do pacote em verde do WhatsApp */
+            color: var(--card-background); /* Texto cinza escuro */
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .package-card .package-cta:hover {
+            background-color: var(--accent-green-darker); /* Verde mais escuro no hover */
+        }
+        .package-card .note {
+            font-size: 0.9em;
+            color: #bbb; /* Texto mais claro para notas */
+            margin-top: 15px;
+        }
+
+        /* Seção de Animações Personalizadas */
+        .animations-section {
+            margin-bottom: 60px;
+        }
+        .animations-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .animations-section p {
+            text-align: center;
+            font-size: 1.1em;
+            color: var(--text-color); /* Texto branco */
+            margin-bottom: 30px;
+        }
+        /* Estilo para o contêiner do vídeo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (altura / largura) */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-bottom: 30px; /* Espaçamento abaixo do vídeo */
+            border-radius: 8px; /* Bordas arredondadas para o vídeo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .price-table th, .price-table td {
+            border: 1px solid #444; /* Borda mais escura para a tabela */
+            padding: 12px;
+            text-align: left;
+            color: var(--text-color); /* Texto branco na tabela */
+        }
+        .price-table th {
+            background-color: #333; /* Fundo mais escuro para o cabeçalho da tabela */
+            color: var(--secondary-color); /* Cor secundária para o texto do cabeçalho */
+            font-weight: bold;
+        }
+        .price-table tr:nth-child(even) {
+            background-color: #2a2a2a; /* Fundo mais escuro para linhas alternadas */
+        }
+        .price-table .price-cell {
+            white-space: nowrap;
+            font-weight: bold;
+            color: var(--accent-green); /* Preço em verde do WhatsApp */
+        }
+        .animations-section .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Seção de Serviços de Conteúdo e Criação Digital */
+        .digital-creation-section {
+            margin-bottom: 60px;
+        }
+        .digital-creation-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .digital-creation-section p {
+            color: var(--text-color); /* Texto branco */
+        }
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra ajustada */
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #333; /* Borda mais escura */
+        }
+        .service-item h3 {
+            color: var(--primary-color);
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        .service-item p {
+            color: var(--text-color); /* Texto branco */
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .service-item .price-display {
+            font-weight: bold;
+            color: var(--accent-green); /* Preço em verde do WhatsApp */
+            font-size: 1.2em;
+        }
+        .digital-creation-section .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Seção de Depoimentos */
+        .testimonials-section {
+            background-color: #2a2a2a; /* Fundo mais escuro para depoimentos */
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 60px;
+        }
+        .testimonials-section h2 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin-bottom: 40px;
+        }
+        .testimonials-section p {
+            color: var(--text-color); /* Texto branco */
+        }
+        .testimonial-item {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 0 auto 20px auto;
+            max-width: 700px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra ajustada */
+            border: 1px solid #333; /* Borda mais escura */
+        }
+        .testimonial-item p {
+            font-style: italic;
+            color: var(--text-color); /* Texto branco */
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .testimonial-item .author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .testimonial-item .rating {
+            color: var(--secondary-color); /* Estrelas de avaliação em amarelo */
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Seção CTA Final */
+        .final-cta-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .final-cta-section h2 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .final-cta-section p {
+            font-size: 1.2em;
+            color: var(--text-color); /* Texto branco */
+            margin-bottom: 30px;
+        }
+        .final-cta-section strong {
+            color: var(--primary-color);
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid var(--secondary-color);
+            color: var(--text-color); /* Texto branco no rodapé */
+            font-size: 0.9em;
+            background-color: var(--primary-color); /* Fundo do rodapé com a cor principal */
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+            .navbar .logo-container {
+                margin-bottom: 10px;
+            }
+            .navbar .language-buttons {
+                text-align: center;
+                width: 100%;
+            }
+            .navbar button {
+                margin: 5px;
+            }
+            .company-name {
+                font-size: 2em;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .cta-section h2, .portfolio-section h2, .packages-section h2,
+            .animations-section h2, .digital-creation-section h2, .testimonials-section h2,
+            .final-cta-section h2 {
+                font-size: 1.6em;
+            }
+            .primary-button, .package-cta {
+                font-size: 1.2em;
+                padding: 12px 25px;
+            }
+            .portfolio-grid, .package-grid, .service-list {
+                grid-template-columns: 1fr;
+            }
+            .price-table th, .price-table td {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Flame Vision Design Logo" class="logo">
+        </div>
+        <div class="language-buttons">
+            <button onclick="setLanguage('pt-BR')" id="btn-pt-BR">Português (BR)</button>
+            <button onclick="setLanguage('en')" id="btn-en">English (US)</button>
+            <button onclick="setLanguage('es')" id="btn-es">Español (ES)</button>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="container">
+            <header>
+                <h1 id="heroTitle">Sua agenda cheia começa aqui</h1>
+                <p id="heroSubtitle">Atraia mais clientes e transforme seu negócio local com estratégias de marketing digital simples e eficazes.</p>
+                <div class="cta-section">
+                    <a href="https://wa.me/5511977618609" target="_blank" class="primary-button" id="heroCtaButton">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                        Quero mais clientes!
+                    </a>
+                </div>
+            </header>
+        </div>
+
+        <div class="container portfolio-section">
+            <h2 id="nichesHeading">Encontre a Solução Perfeita para o Seu Negócio</h2>
+            <p id="nichesSubtitle">Não importa o seu segmento, temos pacotes de marketing digital prontos para impulsionar sua presença online e encher sua agenda.</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <a href="#" class="portfolio-whatsapp-link" data-whatsapp-source="clinicas-consultorios">
+                        <img src="consultorio.png" alt="Clínicas e Consultórios">
+                        <h3 id="nicheClinicsTitle">Clínicas e Consultórios</h3>
+                        <p id="nicheClinicsDesc">Estratégias digitais para atrair mais pacientes e fortalecer sua reputação online.</p>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="#" class="portfolio-whatsapp-link" data-whatsapp-source="pet-shops">
+                        <img src="pet-shop.png" alt="Pet Shops e Clínicas Veterinárias">
+                        <h3 id="nichePetShopsTitle">Pet Shops e Clínicas Veterinárias</h3>
+                        <p id="nichePetShopsDesc">Conecte-se com amantes de pets e veja sua agenda de serviços crescer.</p>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="#" class="portfolio-whatsapp-link" data-whatsapp-source="restaurantes-lanchonetes">
+                        <img src="restaurante-lanchonetes.png" alt="Restaurantes e Lanchonetes">
+                        <h3 id="nicheRestaurantsTitle">Restaurantes e Lanchonetes</h3>
+                        <p id="nicheRestaurantsDesc">Aumente seu fluxo de clientes e pedidos com marketing que dá água na boca.</p>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="#" class="portfolio-whatsapp-link" data-whatsapp-source="saloes-barbearias">
+                        <img src="salão-Barbearias.png" alt="Salões de Beleza e Barbearias">
+                        <h3 id="nicheSalonsTitle">Salões de Beleza e Barbearias</h3>
+                        <p id="nicheSalonsDesc">Atraia mais clientes e preencha sua agenda com nossas campanhas de beleza.</p>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="#" class="portfolio-whatsapp-link" data-whatsapp-source="pagina-de-venda">
+                        <img src="pagina-de-venda.png" alt="Criação de Páginas de Vendas">
+                        <h3 id="nicheSalesPageTitle">Criação de Páginas de Vendas</h3>
+                        <p id="nicheSalesPageDesc">Páginas de alta conversão para automatizar suas vendas e atrair clientes 24/7.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container packages-section">
+            <h2 id="packagesHeading">Escolha o Pacote Ideal para Seu Crescimento</h2>
+            <p id="packagesSubtitle">Nossos pacotes foram criados para oferecer resultados rápidos e visíveis, adaptados ao seu orçamento e objetivos.</p>
+            <div class="package-grid">
+                <div class="package-card">
+                    <h3 id="packageBasicTitle">Pacote Básico</h3>
+                    <p id="packageBasicDesc">Ideal para quem busca iniciar sua presença digital de forma profissional e acessível.</p>
+                    <ul>
+                        <li id="packageBasicFeature1">Gestão de uma rede social</li>
+                        <li id="packageBasicFeature2">4 posts/mês (feed/stories)</li>
+                        <li id="packageBasicFeature3">Suporte via WhatsApp</li>
+                        <li id="packageBasicFeature4">Relatório mensal</li>
+                    </ul>
+                    <div class="price" id="packageBasicPrice">R$ 497,00</div>
+                    <a href="https://wa.me/5511977618609" target="_blank" class="package-cta" id="packageBasicCta">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                        Escolher este pacote
+                    </a>
+                </div>
+
+                <div class="package-card popular" data-label="Mais Popular">
+                    <h3 id="packageEssentialTitle">Pacote Essencial</h3>
+                    <p id="packageEssentialDesc">A solução completa para negócios que querem crescer de forma acelerada e sustentável.</p>
+                    <ul>
+                        <li id="packageEssentialFeature1">Gestão de até duas redes sociais</li>
+                        <li id="packageEssentialFeature2">8 posts/mês (feed/stories)</li>
+                        <li id="packageEssentialFeature3">Criação e gestão de tráfego pago (Google Ads/Meta Ads)</li>
+                        <li id="packageEssentialFeature4">Suporte prioritário via WhatsApp</li>
+                        <li id="packageEssentialFeature5">Relatório mensal detalhado</li>
+                        <li id="packageEssentialFeature6">Reuniões de acompanhamento (1 por mês)</li>
+                    </ul>
+                    <div class="price" id="packageEssentialPrice">R$ 997,00</div>
+                    <a href="https://wa.me/5511977618609" target="_blank" class="package-cta" id="packageEssentialCta">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                        Escolher este pacote
+                    </a>
+                </div>
+
+                <div class="package-card">
+                    <h3 id="packagePremiumTitle">Pacote Premium</h3>
+                    <p id="packagePremiumDesc">Para negócios que buscam dominar o mercado com uma presença digital completa e altamente estratégica.</p>
+                    <ul>
+                        <li id="packagePremiumFeature1">Gestão completa de redes sociais (até 3)</li>
+                        <li id="packagePremiumFeature2">12 posts/mês (feed/stories)</li>
+                        <li id="packagePremiumFeature3">Criação e gestão avançada de tráfego pago (Google Ads/Meta Ads)</li>
+                        <li id="packagePremiumFeature4">Criação de landing page (opcional)</li>
+                        <li id="packagePremiumFeature5">Suporte dedicado e estratégico</li>
+                        <li id="packagePremiumFeature6">Relatório mensal detalhado com insights</li>
+                        <li id="packagePremiumFeature7">Reuniões semanais de acompanhamento</li>
+                    </ul>
+                    <div class="price" id="packagePremiumPrice">R$ 1.997,00</div>
+                    <a href="https://wa.me/5511977618609" target="_blank" class="package-cta" id="packagePremiumCta">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                        Escolher este pacote
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container animations-section">
+            <h2 id="animationsHeading">Animações Personalizadas: Sua Imagem Ganha Vida! 🎬</h2>
+            <p id="animationsSubtitle">Destaque-se com animações exclusivas criadas pela nossa equipe. Ideal para apresentar produtos, serviços ou qualquer ideia de forma dinâmica e cativante.</p>
+
+            <div class="video-container">
+                <video controls preload="none" poster="hulk-poster.jpg" id="animationVideo">
+                    <source src="se-transforme-no-hulk.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+
+            <p id="animationsNote">Perfeito para redes sociais, sites e apresentações. Preços por projeto. Entre em contato para um orçamento personalizado!</p>
+
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th id="tableHeaderItem">Item</th>
+                        <th id="tableHeaderPrice">Preço Base (a partir de)</th>
+                        <th id="tableHeaderDescription">Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="animationLogoItem">Animação de Logo (10-15s)</td>
+                        <td class="price-cell" id="animationLogoPrice">R$ 100,00</td>
+                        <td id="animationLogoDesc">Animação simples do seu logo para introduções de vídeo ou redes sociais.</td>
+                    </tr>
+                    <tr>
+                        <td id="animationProductItem">Animação de Produto/Serviço (15-30s)</td>
+                        <td class="price-cell" id="animationProductPrice">R$ 200,00</td>
+                        <td id="animationProductDesc">Vídeo animado curto para apresentar um produto ou serviço específico.</td>
+                    </tr>
+                    <tr>
+                        <td id="animationExplainerItem">Animação Explicativa (30-60s)</td>
+                        <td class="price-cell" id="animationExplainerPrice">R$ 300,00</td>
+                        <td id="animationExplainerDesc">Vídeo animado mais detalhado para explicar um conceito ou processo.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="button-container">
+                <a href="https://wa.me/5511977618609" target="_blank" class="primary-button" id="animationsCtaButton">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                    Solicitar Orçamento
+                </a>
+            </div>
+        </div>
+
+        <div class="container digital-creation-section">
+            <h2 id="digitalCreationHeading">Serviços de Conteúdo e Criação Digital ✨</h2>
+            <p id="digitalCreationSubtitle">Potencialize sua comunicação com soluções inteligentes para vídeos, imagens e publicações.</p>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3 id="serviceScriptTitle">Criação de Roteiros para Vídeos</h3>
+                    <p id="serviceScriptDesc">Roteiros envolventes e otimizados para YouTube, Reels e TikTok.</p>
+                    <p class="price-display" id="serviceScriptPrice">R$ 150,00</p>
+                </div>
+                <div class="service-item">
+                    <h3 id="serviceImageEditTitle">Edição de Imagens e Vetorização</h3>
+                    <p id="serviceImageEditDesc">Transforme suas imagens com edições profissionais e vetorização para alta qualidade em qualquer tamanho.</p>
+                    <p class="price-display" id="serviceImageEditPrice">R$ 250,00</p>
+                </div>
+                <div class="service-item">
+                    <h3 id="serviceContentConsultTitle">Consultoria de Conteúdo</h3>
+                    <p id="serviceContentConsultDesc">Análise e sugestões de conteúdo baseadas em dados e tendências para máxima relevância.</p>
+                    <p class="price-display" id="serviceContentConsultPrice">R$ 500,00</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <a href="https://wa.me/5511977618609" target="_blank" class="primary-button" id="creativeSolutionsCta">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                    Conheça Nossas Soluções
+                </a>
+            </div>
+        </div>
+
+        <div class="container testimonials-section">
+            <h2 id="testimonialsMainHeading">O Que Nossos Clientes Dizem Sobre Nós 💬</h2>
+            <p id="testimonialsSubtitle">A satisfação dos nossos parceiros é a nossa maior conquista. Veja alguns depoimentos.</p>
+            <div class="testimonial-item">
+                <p id="testimonialText1">"A Flame Vision transformou a presença online da minha clínica. Minha agenda nunca esteve tão cheia! Profissionalismo e resultados incríveis."</p>
+                <div class="author" id="testimonialAuthor1">- Dra. Ana Paula, Clínica Odontológica</div>
+                <div class="rating">★★★★★</div>
+            </div>
+            <div class="testimonial-item">
+                <p id="testimonialText2">"Eu não entendia nada de tráfego pago, mas a equipe da Flame Vision me guiou perfeitamente. Meu faturamento dobrou em 3 meses!"</p>
+                <div class="author" id="testimonialAuthor2">- João Silva, Dono de Pet Shop</div>
+            </div>
+            <div class="testimonial-item">
+                <p id="testimonialText3">"As animações são um diferencial absurdo! Meus posts no Instagram nunca tiveram tanto engajamento. Recomendo demais!"</p>
+                <div class="author" id="testimonialAuthor3">- Maria Oliveira, Chef de Cozinha</div>
+            </div>
+            <div class="testimonial-item">
+                <p id="testimonialText4">"Finalmente uma agência que realmente se importa com o meu negócio e entrega resultados visíveis. Suporte excelente e ideias inovadoras."</p>
+                <div class="author" id="testimonialAuthor4">- Carlos Santos, Proprietário de Barbearia</div>
+            </div>
+        </div>
+
+        <div class="container final-cta-section">
+            <h2 id="finalCtaHeading">Pronto para Encher Sua Agenda? 🚀</h2>
+            <p id="finalCtaSubtitle">Entre em contato para criar a melhor estratégia para o seu negócio e ajudar a <strong id="finalCtaHighlight">encher sua agenda de clientes!</strong></p>
+            <a href="https://wa.me/5511977618609" target="_blank" class="primary-button" id="finalCtaButton">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                Fale Conosco Pelo WhatsApp!
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footerText">© 2024 Flame Vision Design. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Objeto de traduções com os textos para cada idioma
+        const translations = {
+            'pt-BR': {
+                // Meta Tags
+                pageTitle: 'Flame Vision Design - Marketing Digital para Negócios Locais',
+                metaDescription: 'Sua agenda cheia começa aqui. Atraia mais clientes e transforme seu negócio local com estratégias de marketing digital simples e eficazes.',
+                metaKeywords: 'marketing digital, negócios locais, atrair clientes, agência de marketing, criação de sites, gestão de redes sociais, tráfego pago',
+                ogTitle: 'Flame Vision Design - Sua agenda cheia começa aqui',
+                ogDescription: 'Atraia mais clientes e transforme seu negócio local com estratégias de marketing digital simples e eficazes.',
+                twitterTitle: 'Flame Vision Design - Sua agenda cheia começa aqui',
+                twitterDescription: 'Atraia mais clientes e transforme seu negócio local com estratégias de marketing digital simples e eficazes.',
+
+                // Hero Section
+                heroTitle: 'Sua agenda cheia começa aqui',
+                heroSubtitle: 'Atraia mais clientes e transforme seu negócio local com estratégias de marketing digital simples e eficazes.',
+                heroCtaButton: 'Quero mais clientes!',
+                heroCtaWhatsappMessage: 'Olá, vim do botão "Quero mais clientes" da página inicial.',
+
+
+                // Nichos Section
+                nichesHeading: 'Encontre a Solução Perfeita para o Seu Negócio',
+                nichesSubtitle: 'Não importa o seu segmento, temos pacotes de marketing digital prontos para impulsionar sua presença online e encher sua agenda.',
+                nicheClinicsTitle: 'Clínicas e Consultórios',
+                nicheClinicsDesc: 'Estratégias digitais para atrair mais pacientes e fortalecer sua reputação online.',
+                nichePetShopsTitle: 'Pet Shops e Clínicas Veterinárias',
+                nichePetShopsDesc: 'Conecte-se com amantes de pets e veja sua agenda de serviços crescer.',
+                nicheRestaurantsTitle: 'Restaurantes e Lanchonetes',
+                nicheRestaurantsDesc: 'Aumente seu fluxo de clientes e pedidos com marketing que dá água na boca.',
+                nicheSalonsTitle: 'Salões de Beleza e Barbearias',
+                nicheSalonsDesc: 'Atraia mais clientes e preencha sua agenda com nossas campanhas de beleza.',
+                nicheSalesPageTitle: 'Criação de Páginas de Vendas',
+                nicheSalesPageDesc: 'Páginas de alta conversão para automatizar suas vendas e atrair clientes 24/7.',
+
+                // Messages for portfolio image clicks (new)
+                whatsappMessage_clinicas_consultorios: 'Olá, gostaria de saber mais sobre marketing para Clínicas e Consultórios. Vim da imagem de portfólio.',
+                whatsappMessage_pet_shops: 'Olá, gostaria de saber mais sobre marketing para Pet Shops e Clínicas Veterinárias. Vim da imagem de portfólio.',
+                whatsappMessage_restaurantes_lanchonetes: 'Olá, gostaria de saber mais sobre marketing para Restaurantes e Lanchonetes. Vim da imagem de portfólio.',
+                whatsappMessage_saloes_barbearias: 'Olá, gostaria de saber mais sobre marketing para Salões de Beleza e Barbearias. Vim da imagem de portfólio.',
+                whatsappMessage_pagina_de_venda: 'Olá, gostaria de saber mais sobre Criação de Páginas de Vendas. Vim da imagem de portfólio.',
+
+
+                // Packages Section
+                packagesHeading: 'Escolha o Pacote Ideal para Seu Crescimento',
+                packagesSubtitle: 'Nossos pacotes foram criados para oferecer resultados rápidos e visíveis, adaptados ao seu orçamento e objetivos.',
+                packageBasicTitle: 'Pacote Básico',
+                packageBasicDesc: 'Ideal para quem busca iniciar sua presença digital de forma profissional e acessível.',
+                packageBasicFeature1: 'Gestão de uma rede social',
+                packageBasicFeature2: '4 posts/mês (feed/stories)',
+                packageBasicFeature3: 'Suporte via WhatsApp',
+                packageBasicFeature4: 'Relatório mensal',
+                packageBasicCta: 'Escolher este pacote',
+                packageBasicWhatsappMessage: 'Olá, gostaria de saber mais sobre o Pacote Básico.',
+
+                packageEssentialTitle: 'Pacote Essencial',
+                packageEssentialDesc: 'A solução completa para negócios que querem crescer de forma acelerada e sustentável.',
+                packageEssentialFeature1: 'Gestão de até duas redes sociais',
+                packageEssentialFeature2: '8 posts/mês (feed/stories)',
+                packageEssentialFeature3: 'Criação e gestão de tráfego pago (Google Ads/Meta Ads)',
+                packageEssentialFeature4: 'Suporte prioritário via WhatsApp',
+                packageEssentialFeature5: 'Relatório mensal detalhado',
+                packageEssentialFeature6: 'Reuniões de acompanhamento (1 por mês)',
+                packageEssentialCta: 'Escolher este pacote',
+                packageEssentialWhatsappMessage: 'Olá, gostaria de saber mais sobre o Pacote Essencial (Mais Popular).',
+
+
+                packagePremiumTitle: 'Pacote Premium',
+                packagePremiumDesc: 'Para negócios que buscam dominar o mercado com uma presença digital completa e altamente estratégica.',
+                packagePremiumFeature1: 'Gestão completa de redes sociais (até 3)',
+                packagePremiumFeature2: '12 posts/mês (feed/stories)',
+                packagePremiumFeature3: 'Criação e gestão avançada de tráfego pago (Google Ads/Meta Ads)',
+                packagePremiumFeature4: 'Criação de landing page (opcional)',
+                packagePremiumFeature5: 'Suporte dedicado e estratégico',
+                packagePremiumFeature6: 'Relatório mensal detalhado com insights',
+                packagePremiumFeature7: 'Reuniões semanais de acompanhamento',
+                packagePremiumCta: 'Escolher este pacote',
+                packagePremiumWhatsappMessage: 'Olá, gostaria de saber mais sobre o Pacote Premium.',
+
+
+                // Animations Section
+                animationsHeading: 'Animações Personalizadas: Sua Imagem Ganha Vida! 🎬',
+                animationsSubtitle: 'Destaque-se com animações exclusivas criadas pela nossa equipe. Ideal para apresentar produtos, serviços ou qualquer ideia de forma dinâmica e cativante.',
+                animationsNote: 'Perfeito para redes sociais, sites e apresentações. Preços por projeto. Entre em contato para um orçamento personalizado!',
+                tableHeaderItem: 'Item',
+                tableHeaderPrice: 'Preço Base (a partir de)',
+                tableHeaderDescription: 'Descrição',
+                animationLogoItem: 'Animação de Logo (10-15s)',
+                animationLogoPriceValue: 100.00,
+                animationLogoDesc: 'Animação simples do seu logo para introduções de vídeo ou redes sociais.',
+                animationProductItem: 'Animação de Produto/Serviço (15-30s)',
+                animationProductPriceValue: 200.00,
+                animationProductDesc: 'Vídeo animado curto para apresentar um produto ou serviço específico.',
+                animationExplainerItem: 'Animação Explicativa (30-60s)',
+                animationExplainerPriceValue: 300.00,
+                animationExplainerDesc: 'Vídeo animado mais detalhado para explicar um conceito ou processo.',
+                animationsCtaButton: 'Solicitar Orçamento',
+                animationsCtaWhatsappMessage: 'Olá, gostaria de um orçamento para Animações Personalizadas.',
+
+
+                // Digital Creation Services Section
+                digitalCreationHeading: 'Serviços de Conteúdo e Criação Digital ✨',
+                digitalCreationSubtitle: 'Potencialize sua comunicação com soluções inteligentes para vídeos, imagens e publicações.',
+                serviceScriptTitle: 'Criação de Roteiros para Vídeos',
+                serviceScriptDesc: 'Roteiros envolventes e otimizados para YouTube, Reels e TikTok.',
+                serviceScriptPriceValue: 150.00,
+                serviceImageEditTitle: 'Edição de Imagens e Vetorização',
+                serviceImageEditDesc: 'Transforme suas imagens com edições profissionais e vetorização para alta qualidade em qualquer tamanho.',
+                serviceImageEditPriceValue: 250.00,
+                serviceContentConsultTitle: 'Consultoria de Conteúdo',
+                serviceContentConsultDesc: 'Análise e sugestões de conteúdo baseadas em dados e tendências para máxima relevância.',
+                serviceContentConsultPriceValue: 500.00,
+                creativeSolutionsCta: 'Conheça Nossas Soluções',
+                creativeSolutionsWhatsappMessage: 'Olá, gostaria de saber mais sobre os Serviços de Conteúdo e Criação Digital.',
+
+
+                // Testimonials Section
+                testimonialsMainHeading: 'O Que Nossos Clientes Dizem Sobre Nós 💬',
+                testimonialsSubtitle: 'A satisfação dos nossos parceiros é a nossa maior conquista. Veja alguns depoimentos.',
+                testimonialText1: '"A Flame Vision transformou a presença online da minha clínica. Minha agenda nunca esteve tão cheia! Profissionalismo e resultados incríveis."',
+                testimonialAuthor1: '- Dra. Ana Paula, Clínica Odontológica',
+                testimonialText2: '"Eu não entendia nada de tráfego pago, mas a equipe da Flame Vision me guiou perfeitamente. Meu faturamento dobrou em 3 meses!"',
+                testimonialAuthor2: '- João Silva, Dono de Pet Shop',
+                testimonialText3: '"As animações são um diferencial absurdo! Meus posts no Instagram nunca tiveram tanto engajamento. Recomendo demais!"',
+                testimonialAuthor3: '- Maria Oliveira, Chef de Cozinha',
+                testimonialText4: '"Finalmente uma agência que realmente se importa com o meu negócio e entrega resultados visíveis. Suporte excelente e ideias inovadoras."',
+                testimonialAuthor4: '- Carlos Santos, Proprietário de Barbearia',
+
+                // Final CTA Section
+                finalCtaHeading: 'Pronto para Encher Sua Agenda? 🚀',
+                finalCtaSubtitle: 'Entre em contato para criar a melhor estratégia para o seu negócio e ajudar a <strong id="finalCtaHighlight">encher sua agenda de clientes!</strong>',
+                finalCtaHighlight: 'encher sua agenda de clientes!',
+                finalCtaButton: 'Fale Conosco Pelo WhatsApp!',
+                finalCtaWhatsappMessage: 'Olá, vim do botão "Fale Conosco Pelo WhatsApp!" da seção final.',
+
+                // Footer
+                footerText: '© 2024 Flame Vision Design. Todos os direitos reservados.'
+            },
+            'en': {
+                // Meta Tags
+                pageTitle: 'Flame Vision Design - Digital Marketing for Local Businesses',
+                metaDescription: 'Your full schedule starts here. Attract more clients and transform your local business with simple and effective digital marketing strategies.',
+                metaKeywords: 'digital marketing, local businesses, attract clients, marketing agency, website creation, social media management, paid traffic',
+                ogTitle: 'Flame Vision Design - Your full schedule starts here',
+                ogDescription: 'Attract more clients and transform your local business with simple and effective digital marketing strategies.',
+                twitterTitle: 'Flame Vision Design - Your full schedule starts here',
+                twitterDescription: 'Attract more clients and transform your local business with simple and effective digital marketing strategies.',
+
+                // Hero Section
+                heroTitle: 'Your full schedule starts here',
+                heroSubtitle: 'Attract more clients and transform your local business with simple and effective digital marketing strategies.',
+                heroCtaButton: 'I want more clients!',
+                heroCtaWhatsappMessage: 'Hello, I came from the "I want more clients!" button on the home page.',
+
+                // Nichos Section
+                nichesHeading: 'Find the Perfect Solution for Your Business',
+                nichesSubtitle: 'No matter your segment, we have digital marketing packages ready to boost your online presence and fill your schedule.',
+                nicheClinicsTitle: 'Clinics and Offices',
+                nicheClinicsDesc: 'Digital strategies to attract more patients and strengthen your online reputation.',
+                nichePetShopsTitle: 'Pet Shops and Veterinary Clinics',
+                nichePetShopsDesc: 'Connect with pet lovers and watch your service schedule grow.',
+                nicheRestaurantsTitle: 'Restaurants and Snack Bars',
+                nicheRestaurantsDesc: 'Increase your client flow and orders with mouth-watering marketing.',
+                nicheSalonsTitle: 'Beauty Salons and Barber Shops',
+                nicheSalonsDesc: 'Attract more clients and fill your schedule with our beauty campaigns.',
+                nicheSalesPageTitle: 'Sales Page Creation',
+                nicheSalesPageDesc: 'High-converting pages to automate your sales and attract clients 24/7.',
+
+                // Messages for portfolio image clicks (new)
+                whatsappMessage_clinicas_consultorios: 'Hello, I\'d like to know more about marketing for Clinics and Offices. I came from the portfolio image.',
+                whatsappMessage_pet_shops: 'Hello, I\'d like to know more about marketing for Pet Shops and Veterinary Clinics. I came from the portfolio image.',
+                whatsappMessage_restaurantes_lanchonetes: 'Hello, I\'d like to know more about marketing for Restaurants and Snack Bars. I came from the portfolio image.',
+                whatsappMessage_saloes_barbearias: 'Hello, I\'d like to know more about marketing for Beauty Salons and Barber Shops. I came from the portfolio image.',
+                whatsappMessage_pagina_de_venda: 'Hello, I\'d like to know more about Sales Page Creation. I came from the portfolio image.',
+
+                // Packages Section
+                packagesHeading: 'Choose the Ideal Package for Your Growth',
+                packagesSubtitle: 'Our packages are designed to deliver fast and visible results, adapted to your budget and goals.',
+                packageBasicTitle: 'Basic Package',
+                packageBasicDesc: 'Ideal for those looking to start their digital presence professionally and affordably.',
+                packageBasicFeature1: 'Social media management (one platform)',
+                packageBasicFeature2: '4 posts/month (feed/stories)',
+                packageBasicFeature3: 'WhatsApp support',
+                packageBasicFeature4: 'Monthly report',
+                packageBasicCta: 'Choose this package',
+                packageBasicWhatsappMessage: 'Hello, I\'d like to know more about the Basic Package.',
+
+                packageEssentialTitle: 'Essential Package',
+                packageEssentialDesc: 'The complete solution for businesses that want to grow rapidly and sustainably.',
+                packageEssentialFeature1: 'Management of up to two social media platforms',
+                packageEssentialFeature2: '8 posts/month (feed/stories)',
+                packageEssentialFeature3: 'Paid traffic creation and management (Google Ads/Meta Ads)',
+                packageEssentialFeature4: 'Priority WhatsApp support',
+                packageEssentialFeature5: 'Detailed monthly report',
+                packageEssentialFeature6: 'Follow-up meetings (1 per month)',
+                packageEssentialCta: 'Choose this package',
+                packageEssentialWhatsappMessage: 'Hello, I\'d like to know more about the Essential Package (Most Popular).',
+
+                packagePremiumTitle: 'Premium Package',
+                packagePremiumDesc: 'For businesses seeking to dominate the market with a complete and highly strategic digital presence.',
+                packagePremiumFeature1: 'Complete social media management (up to 3 platforms)',
+                packagePremiumFeature2: '12 posts/month (feed/stories)',
+                packagePremiumFeature3: 'Advanced paid traffic creation and management (Google Ads/Meta Ads)',
+                packagePremiumFeature4: 'Landing page creation (optional)',
+                packagePremiumFeature5: 'Dedicated and strategic support',
+                packagePremiumFeature6: 'Detailed monthly report with insights',
+                packagePremiumFeature7: 'Weekly follow-up meetings',
+                packagePremiumCta: 'Choose this package',
+                packagePremiumWhatsappMessage: 'Hello, I\'d like to know more about the Premium Package.',
+
+                // Animations Section
+                animationsHeading: 'Custom Animations: Your Image Comes to Life! 🎬',
+                animationsSubtitle: 'Stand out with exclusive animations created by our team. Ideal for presenting products, services, or any idea dynamically and engagingly.',
+                animationsNote: 'Perfect for social media, websites, and presentations. Prices per project. Contact us for a personalized quote!',
+                tableHeaderItem: 'Item',
+                tableHeaderPrice: 'Base Price (from)',
+                tableHeaderDescription: 'Description',
+                animationLogoItem: 'Logo Animation (10-15s)',
+                animationLogoPriceValue: 100.00,
+                animationLogoDesc: 'Simple animation of your logo for video intros or social media.',
+                animationProductItem: 'Product/Service Animation (15-30s)',
+                animationProductPriceValue: 200.00,
+                animationProductDesc: 'Short animated video to present a specific product or service.',
+                animationExplainerItem: 'Explainer Animation (30-60s)',
+                animationExplainerPriceValue: 300.00,
+                animationExplainerDesc: 'More detailed animated video to explain a concept or process.',
+                animationsCtaButton: 'Request Custom Quote',
+                animationsCtaWhatsappMessage: 'Hello, I\'d like a quote for Custom Animations.',
+
+                // Digital Creation Services Section
+                digitalCreationHeading: 'Content and Digital Creation Services ✨',
+                digitalCreationSubtitle: 'Boost your communication with smart solutions for videos, images, and publications.',
+                serviceScriptTitle: 'Video Scriptwriting',
+                serviceScriptDesc: 'Engaging and optimized scripts for YouTube, Reels, and TikTok.',
+                serviceScriptPriceValue: 150.00,
+                serviceImageEditTitle: 'Image Editing and Vectorization',
+                serviceImageEditDesc: 'Transform your images with professional edits and vectorization for high quality at any size.',
+                serviceImageEditPriceValue: 250.00,
+                serviceContentConsultTitle: 'Content Consulting',
+                serviceContentConsultDesc: 'Analysis and content suggestions based on data and trends for maximum relevance.',
+                serviceContentConsultPriceValue: 500.00,
+                creativeSolutionsCta: 'Discover Our Creative Solutions',
+                creativeSolutionsWhatsappMessage: 'Hello, I\'d like to know more about Content and Digital Creation Services.',
+
+                // Testimonials Section
+                testimonialsMainHeading: 'What Our Clients Say About Us 💬',
+                testimonialsSubtitle: 'Our partners\' satisfaction is our greatest achievement. See some testimonials.',
+                testimonialText1: '"Flame Vision transformed my clinic\'s online presence. My schedule has never been so full! Incredible professionalism and results."',
+                testimonialAuthor1: '- Dr. Ana Paula, Dental Clinic',
+                testimonialText2: '"I knew nothing about paid traffic, but the Flame Vision team guided me perfectly. My revenue doubled in 3 months!"',
+                testimonialAuthor2: '- João Silva, Pet Shop Owner',
+                testimonialText3: '"The animations are an absolute game-changer! My Instagram posts have never had so much engagement. Highly recommend!"',
+                testimonialAuthor3: '- Maria Oliveira, Chef',
+                testimonialText4: '"Finally, an agency that truly cares about my business and delivers visible results. Excellent support and innovative ideas."',
+                testimonialAuthor4: '- Carlos Santos, Barber Shop Owner',
+
+                // Final CTA Section
+                finalCtaHeading: 'Ready to Fill Your Schedule? 🚀',
+                finalCtaSubtitle: 'Contact us to create the best strategy for your business and help you <strong id="finalCtaHighlight">fill your client schedule!</strong>',
+                finalCtaHighlight: 'fill your client schedule!',
+                finalCtaButton: 'Talk to Us on WhatsApp!',
+                finalCtaWhatsappMessage: 'Hello, I came from the "Talk to Us on WhatsApp!" button in the final section.',
+
+                // Footer
+                footerText: '© 2024 Flame Vision Design. All rights reserved.'
+            },
+            'es': {
+                // Meta Tags
+                pageTitle: 'Flame Vision Design - Marketing Digital para Negocios Locales',
+                metaDescription: 'Tu agenda llena comienza aquí. Atrae más clientes y transforma tu negocio local con estrategias de marketing digital simples y efectivas.',
+                metaKeywords: 'marketing digital, negocios locales, atraer clientes, agencia de marketing, creación de sitios web, gestión de redes sociales, tráfico de pago',
+                ogTitle: 'Flame Vision Design - Tu agenda llena comienza aquí',
+                ogDescription: 'Atrae más clientes y transforma tu negocio local con estrategias de marketing digital simples y efectivas.',
+                twitterTitle: 'Flame Vision Design - Tu agenda llena comienza aquí',
+                twitterDescription: 'Atrae más clientes y transforma tu negocio local con estrategias de marketing digital simples y efectivas.',
+
+                // Hero Section
+                heroTitle: 'Tu agenda llena comienza aquí',
+                heroSubtitle: 'Atrae más clientes y transforma tu negocio local con estrategias de marketing digital simples y efectivas.',
+                heroCtaButton: '¡Quiero más clientes!',
+                heroCtaWhatsappMessage: 'Hola, vine del botón "¡Quiero más clientes!" de la página principal.',
+
+                // Nichos Section
+                nichesHeading: 'Encuentra la Solución Perfecta para Tu Negocio',
+                nichesSubtitle: 'No importa tu segmento, tenemos paquetes de marketing digital listos para impulsar tu presencia online y llenar tu agenda.',
+                nicheClinicsTitle: 'Clínicas y Consultorios',
+                nicheClinicsDesc: 'Estrategias digitales para atraer más pacientes y fortalecer tu reputación online.',
+                nichePetShopsTitle: 'Tiendas de Mascotas y Clínicas Veterinarias',
+                nichePetShopsDesc: 'Conéctate con amantes de las mascotas y ve crecer tu agenda de servicios.',
+                nicheRestaurantsTitle: 'Restaurantes y Cafeterías',
+                nicheRestaurantsDesc: 'Aumenta tu flujo de clientes y pedidos con marketing apetitoso.',
+                nicheSalonsTitle: 'Salones de Belleza y Barberías',
+                nicheSalonsDesc: 'Atrae más clientes y llena tu agenda con nuestras campañas de belleza.',
+                nicheSalesPageTitle: 'Creación de Páginas de Ventas',
+                nicheSalesPageDesc: 'Páginas de alta conversión para automatizar tus ventas y atraer clientes 24/7.',
+
+                // Messages for portfolio image clicks (new)
+                whatsappMessage_clinicas_consultorios: 'Hola, me gustaría saber más sobre marketing para Clínicas y Consultorios. Vine de la imagen del portafolio.',
+                whatsappMessage_pet_shops: 'Hola, me gustaría saber más sobre marketing para Tiendas de Mascotas y Clínicas Veterinarias. Vine de la imagen del portafolio.',
+                whatsappMessage_restaurantes_lanchonetes: 'Hola, me gustaría saber más sobre marketing para Restaurantes y Cafeterías. Vine de la imagen del portafolio.',
+                whatsappMessage_saloes_barbearias: 'Hola, me gustaría saber más sobre marketing para Salones de Belleza y Barberías. Vine de la imagen del portafolio.',
+                whatsappMessage_pagina_de_venda: 'Hola, me gustaría saber más sobre Creación de Páginas de Ventas. Vine de la imagen del portafolio.',
+
+                // Packages Section
+                packagesHeading: 'Elige el Paquete Ideal para Tu Crecimiento',
+                packagesSubtitle: 'Nuestros paquetes están diseñados para ofrecer resultados rápidos y visibles, adaptados a tu presupuesto y objetivos.',
+                packageBasicTitle: 'Paquete Básico',
+                packageBasicDesc: 'Ideal para quienes buscan iniciar su presencia digital de forma profesional y accesible.',
+                packageBasicFeature1: 'Gestión de una red social',
+                packageBasicFeature2: '4 publicaciones/mes (feed/stories)',
+                packageBasicFeature3: 'Soporte vía WhatsApp',
+                packageBasicFeature4: 'Informe mensual',
+                packageBasicCta: 'Elegir este paquete',
+                packageBasicWhatsappMessage: 'Hola, me gustaría saber más sobre el Paquete Básico.',
+
+                packageEssentialTitle: 'Paquete Esencial',
+                packageEssentialDesc: 'La solución completa para negocios que quieren crecer de forma acelerada y sostenible.',
+                packageEssentialFeature1: 'Gestión de hasta dos redes sociales',
+                packageEssentialFeature2: '8 publicaciones/mes (feed/stories)',
+                packageEssentialFeature3: 'Creación y gestión de tráfico de pago (Google Ads/Meta Ads)',
+                packageEssentialFeature4: 'Soporte prioritario vía WhatsApp',
+                packageEssentialFeature5: 'Informe mensual detallado',
+                packageEssentialFeature6: 'Reuniones de seguimiento (1 por mes)',
+                packageEssentialCta: 'Elegir este paquete',
+                packageEssentialWhatsappMessage: 'Hola, me gustaría saber más sobre el Paquete Esencial (Más Popular).',
+
+                packagePremiumTitle: 'Paquete Premium',
+                packagePremiumDesc: 'Para negocios que buscan dominar el mercado con una presencia digital completa y altamente estratégica.',
+                packagePremiumFeature1: 'Gestão completa de redes sociais (até 3)',
+                packagePremiumFeature2: '12 publicações/mes (feed/stories)',
+                packagePremiumFeature3: 'Criação e gestão avançada de tráfego pago (Google Ads/Meta Ads)',
+                packagePremiumFeature4: 'Criação de landing page (opcional)',
+                packagePremiumFeature5: 'Suporte dedicado e estratégico',
+                packagePremiumFeature6: 'Relatório mensal detalhado com insights',
+                packagePremiumFeature7: 'Reuniões semanais de acompanhamento',
+                packagePremiumCta: 'Elegir este paquete',
+                packagePremiumWhatsappMessage: 'Hola, me gustaría saber más sobre el Paquete Premium.',
+
+                // Animations Section
+                animationsHeading: 'Animaciones Personalizadas: ¡Tu Imagen Cobra Vida! 🎬',
+                animationsSubtitle: 'Destaca con animaciones exclusivas creadas por nuestro equipo. Ideal para presentar productos, servicios o cualquier idea de forma dinámica y cautivadora.',
+                animationsNote: 'Perfecto para redes sociais, sitios web y presentaciones. Precios por proyecto. ¡Contáctanos para un presupuesto personalizado!',
+                tableHeaderItem: 'Artículo',
+                tableHeaderPrice: 'Precio Base (desde)',
+                tableHeaderDescription: 'Descripción',
+                animationLogoItem: 'Animación de Logotipo (10-15s)',
+                animationLogoPriceValue: 100.00,
+                animationLogoDesc: 'Animación simple de tu logotipo para introducciones de video o redes sociales.',
+                animationProductItem: 'Animación de Producto/Servicio (15-30s)',
+                animationProductPriceValue: 200.00,
+                animationProductDesc: 'Video animado corto para presentar un producto o servicio específico.',
+                animationExplainerItem: 'Animación Explicativa (30-60s)',
+                animationExplainerPriceValue: 300.00,
+                animationExplainerDesc: 'Video animado más detallado para explicar un concepto o proceso.',
+                animationsCtaButton: 'Solicitar Presupuesto',
+                animationsCtaWhatsappMessage: 'Hola, me gustaría un presupuesto para Animaciones Personalizadas.',
+
+                // Digital Creation Services Section
+                digitalCreationHeading: 'Serviços de Conteúdo e Criação Digital ✨',
+                digitalCreationSubtitle: 'Potencia tu comunicación con soluciones inteligentes para videos, imágenes y publicaciones.',
+                serviceScriptTitle: 'Criação de Guiones para Videos',
+                serviceScriptDesc: 'Guiones atractivos y optimizados para YouTube, Reels y TikTok.',
+                serviceScriptPriceValue: 150.00,
+                serviceImageEditTitle: 'Edição de Imagens e Vetorização',
+                serviceImageEditDesc: 'Transforma tus imágenes com edições profissionais e vetorização para alta qualidade em qualquer tamanho.',
+                serviceImageEditPriceValue: 250.00,
+                serviceContentConsultTitle: 'Consultoria de Conteúdo',
+                serviceContentConsultDesc: 'Análise e sugestões de conteúdo baseadas em dados e tendências para máxima relevância.',
+                serviceContentConsultPriceValue: 500.00,
+                creativeSolutionsCta: 'Descubre Nuestras Soluções',
+                creativeSolutionsWhatsappMessage: 'Hola, me gustaría saber más sobre los Servicios de Conteúdo e Criação Digital.',
+
+                // Testimonials Section
+                testimonialsMainHeading: 'Lo que Dicen Nuestros Clientes Sobre Nosotros 💬',
+                testimonialsSubtitle: 'La satisfacción de nuestros socios es nuestro mayor logro. Vea algunos testimonios.',
+                testimonialText1: '"A Flame Vision transformou la presença online de mi clínica. ¡Mi agenda nunca estuvo tão llena! Profesionalismo y resultados increíbles."',
+                testimonialAuthor1: '- Dra. Ana Paula, Clínica Odontológica',
+                testimonialText2: '"Yo no entendía nada de tráfico de pago, pero el equipo de Flame Vision me guiou perfeitamente. ¡Mi facturación se duplicó en 3 meses!"',
+                testimonialAuthor2: '- João Silva, Dueño de Tienda de Mascotas',
+                testimonialText3: '"¡Las animaciones son una ventaja incrível! Mis publicaciones en Instagram nunca tuvieron tanto engagement. ¡Lo recomiendo mucho!"',
+                testimonialAuthor3: '- María Oliveira, Chef de Cozinha',
+                testimonialText4: '"Finalmente una agencia que realmente se preocupa por mi negocio y ofrece resultados visibles. Excelente soporte e ideas innovadoras."',
+                testimonialAuthor4: '- Carlos Santos, Propietário de Barbería',
+
+                // Final CTA Section
+                finalCtaHeading: '¿Listo para Llenar Tu Agenda? 🚀',
+                finalCtaSubtitle: 'Ponte en contacto con nosotros para crear la mejor estrategia para tu negocio y ayudarte a <strong id="finalCtaHighlight">¡llenar tu agenda de clientes!</strong>',
+                finalCtaHighlight: '¡llenar tu agenda de clientes!',
+                finalCtaButton: '¡Háblanos por WhatsApp!',
+                finalCtaWhatsappMessage: 'Hola, vine del botón "¡Háblanos por WhatsApp!" de la sección final.',
+
+                // Footer
+                footerText: '© 2024 Flame Vision Design. Todos los derechos reservados.'
+            }
+        };
+
+        // Valores numéricos dos preços
+        const prices = {
+            packageBasic: 497.00,
+            packageEssential: 997.00,
+            packagePremium: 1997.00,
+            animationLogo: 100.00,
+            animationProduct: 200.00,
+            animationExplainer: 300.00,
+            serviceScript: 150.00,
+            serviceImageEdit: 250.00,
+            serviceContentConsult: 500.00
+        };
+
+        function formatPrice(value, lang) {
+            if (lang === 'pt-BR') {
+                return `R$ ${value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            } else {
+                // Para inglês e espanhol, usa o símbolo de dólar
+                return `$${value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            }
+        }
+
+        function updatePrices(lang) {
+            document.getElementById('packageBasicPrice').textContent = formatPrice(prices.packageBasic, lang);
+            document.getElementById('packageEssentialPrice').textContent = formatPrice(prices.packageEssential, lang);
+            document.getElementById('packagePremiumPrice').textContent = formatPrice(prices.packagePremium, lang);
+            document.getElementById('animationLogoPrice').textContent = formatPrice(prices.animationLogo, lang);
+            document.getElementById('animationProductPrice').textContent = formatPrice(prices.animationProduct, lang);
+            document.getElementById('animationExplainerPrice').textContent = formatPrice(prices.animationExplainer, lang);
+            document.getElementById('serviceScriptPrice').textContent = formatPrice(prices.serviceScript, lang);
+            document.getElementById('serviceImageEditPrice').textContent = formatPrice(prices.serviceImageEdit, lang);
+            document.getElementById('serviceContentConsultPrice').textContent = formatPrice(prices.serviceContentConsult, lang);
+        }
+
+        function setLanguage(lang) {
+            // Atualiza o atributo lang do <html>
+            document.documentElement.lang = lang;
+
+            // Base do link do WhatsApp
+            const whatsappBaseUrl = "https://wa.me/5511977618609";
+
+            // Atualiza o texto de todos os elementos com IDs correspondentes
+            for (const id in translations[lang]) {
+                const element = document.getElementById(id);
+                if (element) {
+                    // Trata meta tags e o title da página
+                    if (id === 'pageTitle') {
+                        document.title = translations[lang][id];
+                    } else if (id.startsWith('meta') || id.startsWith('og') || id.startsWith('twitter')) {
+                        const attr = id.startsWith('meta') ? 'name' : 'property';
+                        // Acha o elemento meta correto para a propriedade (og:title, twitter:description etc.)
+                        const metaElement = document.querySelector(`meta[${attr}*="${id.toLowerCase().replace('meta', '').replace('og', '').replace('twitter', '')}"]`);
+                        if (metaElement) {
+                            metaElement.content = translations[lang][id];
+                        }
+                    } else if (id === 'finalCtaSubtitle') {
+                        // Tratamento especial para o finalCtaSubtitle (que contém <strong>)
+                        element.innerHTML = translations[lang][id];
+                    } else if (!id.endsWith('Value') && !id.endsWith('WhatsappMessage') && !id.startsWith('whatsappMessage_')) { // Ignora os IDs que são apenas para valores numéricos ou mensagens de whatsapp
+                        element.textContent = translations[lang][id];
+                    }
+                }
+            }
+            
+            // Atualiza os preços formatados
+            updatePrices(lang);
+
+            // Gerencia a classe 'active' para os botões da navbar
+            const buttons = document.querySelectorAll('.language-buttons button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            // Atualiza o data-label do pacote "Mais Popular"
+            const popularPackage = document.querySelector('.package-card.popular');
+            if (popularPackage) {
+                popularPackage.dataset.label = (lang === 'pt-BR') ? 'Mais Popular' : (lang === 'en' ? 'Most Popular' : 'Más Popular');
+            }
+
+            // Atualiza os links do WhatsApp com as mensagens específicas
+            document.getElementById('heroCtaButton').href = `${whatsappBaseUrl}?text=${encodeURIComponent(translations[lang].heroCtaWhatsappMessage)}`;
+            document.getElementById('packageBasicCta').href = `${whatsappBaseUrl}?text=${encodeURIComponent(translations[lang].packageBasicWhatsappMessage)}`;
+            document.getElementById('packageEssentialCta').href = `${whatsappBaseUrl}?text=${encodeURIComponent(translations[lang].packageEssentialWhatsappMessage)}`;
+            document.getElementById('packagePremiumCta').href = `${whatsappBaseUrl}?text=${encodeURIComponent(translations[lang].packagePremiumWhatsappMessage)}`;
+            document.getElementById('animationsCtaButton').href = `${whatsappBaseUrl}?text=${encodeURIComponent(translations[lang].animationsCtaWhatsappMessage)}`;
+            document.getElementById('creativeSolutionsCta').href = `${whatsappBaseUrl}?text=${encodeURIComponent(translations[lang].creativeSolutionsWhatsappMessage)}`;
+            document.getElementById('finalCtaButton').href = `${whatsappBaseUrl}?text=${encodeURIComponent(translations[lang].finalCtaWhatsappMessage)}`;
+
+            // Atualiza os links das imagens de portfólio
+            document.querySelectorAll('.portfolio-whatsapp-link').forEach(link => {
+                const source = link.dataset.whatsappSource;
+                const messageKey = `whatsappMessage_${source}`;
+                if (translations[lang][messageKey]) {
+                    link.href = `${whatsappBaseUrl}?text=${encodeURIComponent(translations[lang][messageKey])}`;
+                }
+            });
+        }
+
+        // Inicializa o idioma padrão ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('pt-BR'); // Define Português como idioma padrão
+        });
+    </script>
+</body>
+</html>
